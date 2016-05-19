@@ -1,12 +1,12 @@
 var config = require('../config.js');
 var logLevel = config.config("logLevel");
-console.log(logLevel);
 var colors = require('colors');
 var color = {
     'error':'red',
     'trace':'blue',
     'warning':'green',
-    'request':'magenta'
+    'request':'magenta',
+    'debug':'yellow'
 }
 function writeLog(logger)
 {
@@ -14,7 +14,7 @@ function writeLog(logger)
     var dateFormat = require('dateformat');  
     var date = dateFormat(Date.now(),'isoDateTime');
     var output = "";
-    var sep = '============= '+ date +' =============='
+    var sep = '============= '+ date +'  @'+(logger.caller.name || 'main')+' =============='
     console.log(sep);
     output += sep +'\n'
      logger.logMsg.forEach(function(obj,k){
@@ -62,7 +62,9 @@ request:function(){
         var ip =  request.connection.remoteAddress; 
         logger.logMsg.push({
         "request":" Method : "+method+" - Ip : "+
-            ip+" - url: "+(request.url || '')+" - Query: "+(query || '')
+            ip+" - url: "
+            +(url.parse(request.url).pathname || '')
+            +" - Query: "+(query || '')
         });
     }
   return logger;

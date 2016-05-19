@@ -1,23 +1,56 @@
+const logger = require('./libs/logger.js').logger;
 
-//take the path and return the contoller and function to reqponse 
+/*
+name :writeHead
+params:params 
+description:choose the head content based on the ext  
+author:mohammed 
+*/
 
-function toWhere(params) {
- var path = params.path;
- var type = params.ext;
+function writeHead(res,ext){
+  var type = 'text/html';
+  if(['.jpg','.jpeg'].indexOf(ext)>-1){
+      type = 'image/jpeg';
+  }else if(ext == '.css'){
+      type='text/css';
+  }else if(ext == '.js'){
+      type ='application/javascript';
+  }
+
+  res.writeHead(200,  {
+        'Content-type':type
+  });
+}
+/*
+name :toWhere
+params:params 
+return:{controller,method,params}
+description:decide which controller will response to the request  
+author:mohammed 
+*/
+
+function toWhere(req_params) {
+ var path = req_params.path;
+ var type = req_params.ext;
+ var url_params = req_params.params;
  var routing = require('./routing.js');
  var rules = routing.rules;
- var static = routing.static;
- console.log("routing rules: \n ",rules);
- console.log("routing params: \n ",params);
- 
-if(type == ''){ 
+
+    
+ //need enhanacement 
+if(type == ''){
+    for (var key in url_params){
+        path +='/{'+key+'}'
+    }
     if(rules.hasOwnProperty(path)){
-        var target = rules[path][params.method.toLowerCase()].split('.');
+        var target = rules[path][req_params.method.toLowerCase()].split('.');
         var method = target[1];
         var controller = target[0];
     return {
          'controller': controller,
-         'method' : method
+         'method' : method,
+         'params' : url_params  
+
      }     
      }else{
          return false
@@ -39,39 +72,53 @@ return:{path,method,extention}
 description:parse the request to extract the needed info 
 author:mohammed 
 */
+
 function parser(req){
+ var querystring = require('querystring');
  var url =  require('url');
  var pathmod = require('path');
  var method = req.method;
- var path = url.parse(req.url).path;
+ var parsed_url = url.parse(req.url);
+ var path = parsed_url.pathname;
+ var query =parsed_url.query; 
  var ext = pathmod.extname(path);
     
  return {
      path : path,
      method : method,
-     ext : ext 
+     ext : ext,
+     params:querystring.parse(query) 
  }
  
 }
 
-// execute the function nedded 
+/*
+name :exec
+params:executers,res,req 
+description:execute the function in the controller and get the respose 
+author:mohammed 
+*/
 
 function exec(executers,res,req){
-    console.log("executing \n ",executers,"\n");
     var controllers = require('./controllers.js');
     var controller = executers['controller'];
     var method = executers['method'];
-    return controllers[controller][method](res,executers.params,req);
+     controllers[controller][method](res,executers.params,req);
 }
 
-//take the request and give the response 
+/*
+name :route 
+params:request,response 
+description:route the request to responder 
+author:mohammed 
+*/
+
 function route (req , res){
     var info = parser(req);
+    logger(route).debug(JSON.stringify(info)).log();
     var executers = toWhere(info);
     if(executers){
-        res.writeHead(200,{
-        'Content-type':'text/html'
-        });
+        writeHead(res,info['ext']);
         exec(executers,res,req);
     }else {
         res.writeHead(404,{

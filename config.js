@@ -9,7 +9,7 @@ function load(){
  var  xml = fs.readFileSync(baseDir + 'config.xml').toString()
 parseString(xml , function(e,r){
     if(e)return logger(parseString).error(e);
-    config = r;
+    config = r.config;
     loaded = true;
 })
 }
@@ -17,7 +17,7 @@ parseString(xml , function(e,r){
 function getConfig(prob){
     if(loaded){
         if(config.hasOwnProperty(prob))
-        return config[prob];
+        return config[prob][0];
     }
 
 }

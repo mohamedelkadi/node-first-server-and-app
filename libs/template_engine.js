@@ -11,11 +11,12 @@ function render(view,data){
       content += partials;
   }
   partials = [];
-  return header + content + footer;
+  return header.toString() + content + footer.toString();
 }
 
 function partial(view,dataArr){
   var t_content =file.load(view+'.html',path);
+  t_content = t_content.toString();
   var content = '';
   var output = '';
 

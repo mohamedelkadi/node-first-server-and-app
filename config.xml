@@ -1,1 +1,5 @@
-<logLevel>5</logLevel>
+ <config>
+  <logLevel>5</logLevel>
+  <port>8081</port>
+  <database>server</database>    
+</config>

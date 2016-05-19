@@ -1,3 +1,5 @@
 logfile >>> delete, compress, log start and stop , colors , levels .
 db connection => open and close 
 crud operations. 
+delete and update 
+show images 

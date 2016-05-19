@@ -1,8 +1,15 @@
 const http = require('http');
 const router = require('./router.js');
 const logger = require('./libs/logger.js').logger;
+const config = require('./config').config;
 
-/*methods*/
+/*
+name :handeler
+params:request,response 
+description:handel server request and response 
+author:mohammed 
+*/
+
 function handeler(req,res){
     logger(handeler)
     .request()
@@ -12,12 +19,17 @@ function handeler(req,res){
 }
 
 
+/*
+name :handeler
+params:request,response 
+description:handel server request and response 
+author:mohammed 
+*/
 
-/*Start the server*/
 const server = http.createServer(handeler);
 server.on('error', function(err, socket){
     console.error("can not start the server on this port");
 });
-
-server.listen(8081);
-console.log("server started at 8081");
+var port = config("port");
+server.listen(port);
+logger(server).trace("server started on "+ port).log();
