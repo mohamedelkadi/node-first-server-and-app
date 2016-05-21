@@ -7,7 +7,8 @@ description:choose the head content based on the ext
 author:mohammed 
 */
 
-function writeHead(res,ext){
+function writeHeadStatic(res,ext){
+  //static files with no errors
   var type = 'text/html';
   if(['.jpg','.jpeg'].indexOf(ext)>-1){
       type = 'image/jpeg';
@@ -21,6 +22,33 @@ function writeHead(res,ext){
         'Content-type':type
   });
 }
+
+function responder(res,ext){
+    var default_type = {
+        'Content-type':'text/html'};
+  return function(msg,code,type){
+      var type = type || default_type;
+          if(code == undefined)
+          {   writeHeadStatic(res,ext);
+              res.end(msg);
+          }
+          else if(code == 404)
+          {
+              res.writeHead(404,type);
+              res.end("404 Not found");
+          }
+          else
+          {
+             res.writeHead(code,type);
+             if(msg)
+             res.end(msg);
+             else
+             res.end();
+          }
+  }
+}
+
+
 /*
 name :toWhere
 params:params 
@@ -31,14 +59,14 @@ author:mohammed
 
 function toWhere(req_params) {
  var path = req_params.path;
- var type = req_params.ext;
+ var ext = req_params.ext;
  var url_params = req_params.params;
  var routing = require('./routing.js');
  var rules = routing.rules;
 
     
- //need enhanacement 
-if(type == ''){
+ //need enhanacement [search controllers then static files , then not found]
+if(ext == ''){
     for (var key in url_params){
         path +='/{'+key+'}'
     }
@@ -49,8 +77,8 @@ if(type == ''){
     return {
          'controller': controller,
          'method' : method,
-         'params' : url_params  
-
+         'params' : url_params,  
+          'ext': ext
      }     
      }else{
          return false
@@ -59,7 +87,8 @@ if(type == ''){
     return {
          'controller': 'static',
          'method' : 'fetch',
-         'params' : path  
+         'params' : path ,
+         'ext':ext
      }   
  }
 
@@ -118,8 +147,7 @@ function route (req , res){
     logger(route).debug(JSON.stringify(info)).log();
     var executers = toWhere(info);
     if(executers){
-        writeHead(res,info['ext']);
-        exec(executers,res,req);
+        exec(executers,responder(res,info.ext),req);
     }else {
         res.writeHead(404,{
         'Content-type':'text/html'

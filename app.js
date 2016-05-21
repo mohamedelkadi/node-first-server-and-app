@@ -2,6 +2,8 @@ const http = require('http');
 const router = require('./router.js');
 const logger = require('./libs/logger.js').logger;
 const config = require('./config').config;
+var SESSIONS = require('./libs/sessions.js').SESSIONS;
+
 /*
 name :handeler
 params:request,response 
@@ -32,3 +34,5 @@ server.on('error', function(err, socket){
 var port = config("port");
 server.listen(port);
 logger(server).trace("server started on "+ port).log();
+
+module.exports.SESSIONS = SESSIONS;

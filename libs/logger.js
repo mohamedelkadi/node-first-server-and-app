@@ -15,7 +15,6 @@ function writeLog(logger)
     var date = dateFormat(Date.now(),'isoDateTime');
     var output = "";
     var sep = '============= '+ date +'  @'+(logger.caller.name || 'main')+' =============='
-    console.log(sep);
     output += sep +'\n'
      logger.logMsg.forEach(function(obj,k){
          for(var key in obj ){

@@ -2,6 +2,9 @@ const rules = {
     "/":{
         get:"pages.home",
     },
+    "/authed":{
+        get:"pages.authed" 
+    },
     '/users':{
         get:'users.index'
     },

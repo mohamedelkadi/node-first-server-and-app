@@ -5,7 +5,7 @@ const logger = require('./libs/logger.js').logger;
 const Promise = require('promise');
 var events = require('events');
 var eventEmitter = new events.EventEmitter();
-
+var SESSIONS = require('./app.js').SESSIONS;
 function formData(req){
     var querystring = require('querystring');
     
@@ -31,9 +31,24 @@ const pages = {
 
     home : function(res){
          //var page = Template.render('home');
-         var part = Template.partial('home').render();
-        res.end(part);
+         var data = Template.partial('home').render();
+         res(data,200);
         
+    },
+    authed: function(res){
+        var data =[];
+        var dateFormat = require('dateformat');  
+
+         var users = SESSIONS.each(function(k,v){
+            data.push({
+                "user":k,
+                 "date":dateFormat(v,'isoDateTime')
+            });
+        });
+         var page = Template.before("<h1>you are in your page</h1>")
+         .partial('authed',data)
+         .render();
+         res(page,200);
     }
 }
 
@@ -48,12 +63,12 @@ const users = {
     */
     index : function(res){
         DB().users.find(function(err,data){
-            if(err) res.end("database error");
+            if(err) res("database error",500);
             var out = Template
             .partial('users_head')
             .partial('users',data)
             .after('</table>').render();
-            res.end(out);
+            res(out,200);
             return;
         });
     },
@@ -65,7 +80,7 @@ const users = {
     */
     create : function(res){
         var page = Template.render('new_user');
-        res.end(page);
+        res(page,200);
     },
     /*
     name :show
@@ -78,7 +93,7 @@ const users = {
         .then(
             function(data){
                 var out = Template.partial('users',data).render();
-                res.end(out);
+                res(out,200);
             }, function(err){
                 logger(show).error(err).log();
             }
@@ -106,7 +121,7 @@ const users = {
         users.find(params).then(
         function(data){
            var page = Template.partial('update_user',data).render();
-           res.end(page);
+           res(page,200);
         }
         ,function(err){
             logger(update).error(err).log();
@@ -122,8 +137,13 @@ const users = {
 
         formData(req);
         eventEmitter.on('form_data',function(body){
-            DB().users.update(params,{"$set":body},function(err){});
-        })
+            DB().users.update(params,{"$set":body},function(err){
+                if(err)
+                    return res(err,500);
+                res(false,303,{'Location': '/users'});
+            });
+        });
+        
   },
     /*
     name :store
@@ -134,10 +154,10 @@ const users = {
     store : function(res,params,req){
     formData(req);
     eventEmitter.on('form_data',function(body){
-        res.writeHead(200);
-        res.end(JSON.stringify(body));
         DB().users.insert(body,function(err){
-          console.log(err);
+            if(err)
+                return res(err,500);
+            res(false,303,{'Location':'/users'});
         }); 
     })
 
@@ -156,7 +176,7 @@ const users = {
 const sessions ={
     create:function(res){
         var page = Template.render('login');
-        res.end(page);
+        res(page,200);
     },
     store:function(res,params,req){
         formData(req);
@@ -165,12 +185,15 @@ const sessions ={
             if(data['password'])
             DB().users.count(data,function(err,cnt){
                 if(cnt > 0)
-                res.end("loged");
+                {    
+                 SESSIONS.add(data.name);
+                res(data.name+"loged",200);
+                }
                 else 
-                res.end("wrong");
+                res("wrong",200);
             });
             else
-                res.end("no password");
+                res("no password",200);
         })
     },
     destroy:function(){}
@@ -187,9 +210,9 @@ const static = {
     fetch: function(res,file){
       var data = loader.load(file);
       try {
-         res.end(data);
+         res(data);
       }catch(e){
-        res.end(data.toString());
+        res(data.toString());
 
           }
     }
