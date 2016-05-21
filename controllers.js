@@ -1,6 +1,5 @@
 const loader = require('./libs/files_loader.js');
 const DB = require('./libs/database.js').get_db; 
-const View = require('./libs/view.js');
 const Template = require('./libs/template_engine.js'); 
 const logger = require('./libs/logger.js').logger;
 const Promise = require('promise');
@@ -34,7 +33,10 @@ const users = {
     index : function(res){
         DB().users.find(function(err,data){
             if(err) res.end("database error");
-            var out = Template.partial('users',data).render();
+            var out = Template
+            .before('<div class="user-list"><ul>')
+            .partial('users',data)
+            .after('</ul></div>').render();
             res.end(out);
             return;
         });
@@ -46,7 +48,7 @@ const users = {
     author:mohammed 
     */
     create : function(res){
-        var data = View.render('new_user');
+        var data = Template.render('new_user');
         res.end(data);
     },
     /*
@@ -56,11 +58,13 @@ const users = {
     author:mohammed 
     */
     show : function(res,params){
-        var promiseByData = users.find(params);
-        promiseByData.then(
-            function resolve(data){
+        users.find(params)
+        .then(
+            function(data){
                 var out = Template.partial('users',data).render();
                 res.end(out);
+            }, function(err){
+                logger(show).error(err).log();
             }
         );
         
@@ -77,16 +81,43 @@ const users = {
         });
     },
     /*
+    name :edit
+    params:res,params
+    description:show edit form with user data
+    author:mohammed 
+    */
+    edit : function(res,params){
+        users.find(params).then(
+        function(data){
+           var page = Template.partial('update_user',data).render();
+           res.end(page);
+        }
+        ,function(err){
+            logger(update).error(err).log();
+        })
+    },
+    /*
     name :update
     params:res,params
     description:update one user information  
     author:mohammed 
     */
-    update : function(res,params){
-        var user = DB().users.find(params,function(err,data){
-        var out = Template.partial('users',data).render();
-        res.end(out);
-        });
+    update : function(res,params,req){
+            var querystring = require('querystring');
+
+    var body = "";
+  req.on('data', function (chunk) {
+    body += chunk;
+  });
+  req.on('end', function () {
+    body = querystring.parse(body);
+    res.writeHead(200);
+    res.end(JSON.stringify(body));
+            DB().users.update(params,{"$set":body},function(err){
+          console.log(err);
+      });  
+
+  });
     },
     /*
     name :store

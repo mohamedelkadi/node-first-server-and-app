@@ -1,4 +1,4 @@
-document.querySelector('body').addEventListener('click',function(ev){
+document.querySelector('div.user-list').addEventListener('click',function(ev){
 var ele = ev.target;
 if(ele.className =='del');
 {   var liElement = ele.parentElement;

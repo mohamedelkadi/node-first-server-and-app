@@ -4,12 +4,17 @@ var path = config.baseDir +'views/'
 var header = file.load('header.html',path);
 var footer = file.load('footer.html',path);
 var partials = [];
-
+var _before ='';
+var _after = ''
 function render(view,data){
+  if(view) partial(view,data);
   var content = '';
   for( var part in partials){
       content += partials;
   }
+  content = _before + content + _after ;
+  _before = '';
+  _after ='';
   partials = [];
   return header.toString() + content + footer.toString();
 }
@@ -35,6 +40,18 @@ function partial(view,dataArr){
   partials.push(output);
  return this;
 }
+function before(_html){
+    _before = _html 
+    return this;
+}
+function after(_html){
+    _after = _html
+    return this;
 
+}
 exports.render = render;
 exports.partial = partial;
+exports.before= before;
+exports.after= after;
+
+

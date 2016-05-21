@@ -28,10 +28,14 @@ function writeLog(logger)
     
     fs.open('log.txt','a',function(err,fd){
         if(err) return console.error(err);
-        var stats = fs.statSync("log.txt");
-        var fileSizeInKb = stats["size"]/1000;
-        if(fileSizeInKb > 50){
-            fs.renameSync('log.txt', Date.now()+'_'+'log.txt')
+        try{
+            var stats = fs.statSync("log.txt");
+            var fileSizeInKb = stats["size"]/1000;
+            if(fileSizeInKb > 50){
+                fs.renameSync('log.txt', Date.now()+'_'+'log.txt')
+            }
+        }catch(e){
+            logger.init(open).error(e).log();
         }
         fs.write(fd,output,0,'utf-8',function(err){
             if(err)console.log(err);

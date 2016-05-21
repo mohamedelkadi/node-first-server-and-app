@@ -11,8 +11,12 @@ const rules = {
     },
     '/users/{name}':{
         get:'users.show',
-        post:'users.update',
         delete:'users.delete'
+    },
+    '/users/edit/{name}':{
+        get:'users.edit',
+        post:'users.update'
+
     }
     
 }
