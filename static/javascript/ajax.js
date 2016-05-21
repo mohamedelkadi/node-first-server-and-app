@@ -1,14 +1,19 @@
-document.querySelector('div.user-list').addEventListener('click',function(ev){
+var divlist = document.querySelector('div.user-list');
+if(divlist)
+divlist.addEventListener('click',function(ev){
 var ele = ev.target;
-if(ele.className =='del');
-{   var liElement = ele.parentElement;
+if(ele.className === "del")
+{ 
+    ev.preventDefault();
+
+    var liElement = ele.parentElement;
     var name = liElement.firstElementChild.textContent;
     del(name);
     liElement.remove();
+
 }
-    return false;
 }
-                                                   );
+);
 function del(name) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {

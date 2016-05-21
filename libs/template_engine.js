@@ -5,7 +5,14 @@ var header = file.load('header.html',path);
 var footer = file.load('footer.html',path);
 var partials = [];
 var _before ='';
-var _after = ''
+var _after = '';
+function escapeRegExp(str) {
+    return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+}
+function replaceAll(str, find, replace) {
+  return str.replace(new RegExp(escapeRegExp(find), 'g'), replace);
+}
+
 function render(view,data){
   if(view) partial(view,data);
   var content = '';
@@ -32,7 +39,8 @@ function partial(view,dataArr){
     data = data || [];
     content = t_content;
     for(var key in data){
-        content = content.replace('{{'+key+'}}',data[key]);
+        //content = content.replace('{{'+key+'}}',data[key]);
+        content = replaceAll(content,'{{'+key+'}}',data[key]);
   }
    output += content ;
   }

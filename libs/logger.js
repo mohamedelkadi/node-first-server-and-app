@@ -35,7 +35,7 @@ function writeLog(logger)
                 fs.renameSync('log.txt', Date.now()+'_'+'log.txt')
             }
         }catch(e){
-            logger.init(open).error(e).log();
+            logger.init("open").error(e).log();
         }
         fs.write(fd,output,0,'utf-8',function(err){
             if(err)console.log(err);

@@ -3,6 +3,22 @@ const DB = require('./libs/database.js').get_db;
 const Template = require('./libs/template_engine.js'); 
 const logger = require('./libs/logger.js').logger;
 const Promise = require('promise');
+var events = require('events');
+var eventEmitter = new events.EventEmitter();
+
+function formData(req){
+    var querystring = require('querystring');
+    
+    var body = "";
+    req.on('data', function (chunk) {
+        body += chunk;
+        });
+    req.on('end', function () {
+        body = querystring.parse(body);
+        eventEmitter.emit("form_data",body);
+      });  
+};
+
 /* Pages controller */
 
 const pages = {
@@ -103,22 +119,12 @@ const users = {
     author:mohammed 
     */
     update : function(res,params,req){
-            var querystring = require('querystring');
 
-    var body = "";
-  req.on('data', function (chunk) {
-    body += chunk;
-  });
-  req.on('end', function () {
-    body = querystring.parse(body);
-    res.writeHead(200);
-    res.end(JSON.stringify(body));
-            DB().users.update(params,{"$set":body},function(err){
-          console.log(err);
-      });  
-
-  });
-    },
+        formData(req);
+        eventEmitter.on('form_data',function(body){
+            DB().users.update(params,{"$set":body},function(err){});
+        })
+  },
     /*
     name :store
     params:res
@@ -126,20 +132,15 @@ const users = {
     author:mohammed 
     */
     store : function(res,params,req){
-    var querystring = require('querystring');
-
-    var body = "";
-  req.on('data', function (chunk) {
-    body += chunk;
-  });
-  req.on('end', function () {
-    body = querystring.parse(body);
-    res.writeHead(200);
-    res.end(JSON.stringify(body));
-      DB().users.insert(body,function(err){
+    formData(req);
+    eventEmitter.on('form_data',function(body){
+        res.writeHead(200);
+        res.end(JSON.stringify(body));
+        DB().users.insert(body,function(err){
           console.log(err);
-      });
-  });
+        }); 
+    })
+
     },
   find : function(params){
       return new Promise(function(resolve,reject){
