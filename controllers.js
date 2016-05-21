@@ -45,7 +45,7 @@ const pages = {
                  "date":dateFormat(v,'isoDateTime')
             });
         });
-         var page = Template.before("<h1>you are in your page</h1>")
+         var page = Template.before("<h1>Logged in users --         <a href='/sessions/clear'>clear</a></h1>")
          .partial('authed',data)
          .render();
          res(page,200);
@@ -187,16 +187,29 @@ const sessions ={
                 if(cnt > 0)
                 {    
                  SESSIONS.add(data.name);
-                res(data.name+"loged",200);
+                res(false,303,{
+                    'Location':"/"
+                });
                 }
                 else 
-                res("wrong",200);
+                res("wrong password",200);
             });
             else
-                res("no password",200);
+                res("no password given ",200);
         })
     },
-    destroy:function(){}
+    destroy:function(res,params){
+        if(SESSIONS.remove(params.name))
+        res(false,303,{
+            'Location':'/authed'
+        })
+    },
+    clear:function(res){
+        SESSIONS.clear();
+        res(false,303,{
+            'Location':'/authed'
+        })
+    }
 }
 /*Static controller*/
 

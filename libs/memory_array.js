@@ -3,7 +3,7 @@ var MemoryArr = {
         this[key] = value;
     },
     remove:function(key){
-        delete(this.key)
+        return delete(this[key])
     },
     clear:function(){
      for(key in this){

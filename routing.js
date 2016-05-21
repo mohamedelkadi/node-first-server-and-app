@@ -24,8 +24,13 @@ const rules = {
     '/login':{
         get:'sessions.create',
         post:'sessions.store'
+    },
+    '/sessions/destroy/{name}':{
+        get:'sessions.destroy'
+    },
+    '/sessions/clear':{
+        get: 'sessions.clear'
     }
-    
 }
 
 
