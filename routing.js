@@ -17,6 +17,10 @@ const rules = {
         get:'users.edit',
         post:'users.update'
 
+    },
+    '/login':{
+        get:'sessions.create',
+        post:'sessions.store'
     }
     
 }

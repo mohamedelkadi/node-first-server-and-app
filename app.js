@@ -2,7 +2,6 @@ const http = require('http');
 const router = require('./router.js');
 const logger = require('./libs/logger.js').logger;
 const config = require('./config').config;
-
 /*
 name :handeler
 params:request,response 

@@ -50,9 +50,9 @@ const users = {
         DB().users.find(function(err,data){
             if(err) res.end("database error");
             var out = Template
-            .before('<div class="user-list"><ul>')
+            .partial('users_head')
             .partial('users',data)
-            .after('</ul></div>').render();
+            .after('</table>').render();
             res.end(out);
             return;
         });
@@ -64,8 +64,8 @@ const users = {
     author:mohammed 
     */
     create : function(res){
-        var data = Template.render('new_user');
-        res.end(data);
+        var page = Template.render('new_user');
+        res.end(page);
     },
     /*
     name :show
@@ -152,6 +152,29 @@ const users = {
   });
   }
 }
+/*Sesstion controller*/
+const sessions ={
+    create:function(res){
+        var page = Template.render('login');
+        res.end(page);
+    },
+    store:function(res,params,req){
+        formData(req);
+        eventEmitter.on('form_data',function(data){
+            logger(sessions.store).trace(JSON.stringify(data)).log();
+            if(data['password'])
+            DB().users.count(data,function(err,cnt){
+                if(cnt > 0)
+                res.end("loged");
+                else 
+                res.end("wrong");
+            });
+            else
+                res.end("no password");
+        })
+    },
+    destroy:function(){}
+}
 /*Static controller*/
 
 const static = {
@@ -171,6 +194,7 @@ const static = {
           }
     }
 }
+module.exports.sessions = sessions;
 module.exports.pages = pages; 
 module.exports.static = static;
 module.exports.users = users;

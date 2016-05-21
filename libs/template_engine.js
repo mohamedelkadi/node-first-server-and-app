@@ -17,7 +17,7 @@ function render(view,data){
   if(view) partial(view,data);
   var content = '';
   for( var part in partials){
-      content += partials;
+      content += partials[part];
   }
   content = _before + content + _after ;
   _before = '';
@@ -39,7 +39,6 @@ function partial(view,dataArr){
     data = data || [];
     content = t_content;
     for(var key in data){
-        //content = content.replace('{{'+key+'}}',data[key]);
         content = replaceAll(content,'{{'+key+'}}',data[key]);
   }
    output += content ;

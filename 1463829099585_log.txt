@@ -1,0 +1,815 @@
+============= 2016-05-21T12:41:30+0200  @main ==============
+ [ error ] -> Error: ENOENT, no such file or directory 'log.txt'
+=====================================================
+============= 2016-05-21T12:41:30+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /favicon.ico - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:41:30+0200  @route ==============
+ [ debug ] -> {"path":"/favicon.ico","method":"GET","ext":".ico","params":{}}
+=====================================================
+============= 2016-05-21T12:41:36+0200  @main ==============
+ [ trace ] -> server started on 8081
+=====================================================
+============= 2016-05-21T12:41:41+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users/new - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:41:41+0200  @route ==============
+ [ debug ] -> {"path":"/users/new","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T12:41:42+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:41:42+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:41:42+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:41:42+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T12:41:42+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /favicon.ico - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:41:42+0200  @route ==============
+ [ debug ] -> {"path":"/favicon.ico","method":"GET","ext":".ico","params":{}}
+=====================================================
+============= 2016-05-21T12:41:55+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:41:55+0200  @route ==============
+ [ debug ] -> {"path":"/users","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T12:41:55+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:41:55+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:41:55+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:41:55+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T12:41:55+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:41:55+0200  @route ==============
+ [ debug ] -> {"path":"/users","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T12:41:55+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:41:55+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:41:55+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:41:55+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T12:42:31+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users/edit - Query: name=some%20who
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:42:31+0200  @route ==============
+ [ debug ] -> {"path":"/users/edit","method":"GET","ext":"","params":{"name":"some who"}}
+=====================================================
+============= 2016-05-21T12:42:31+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:42:31+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:42:31+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:42:31+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T12:44:08+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users/new - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:44:08+0200  @route ==============
+ [ debug ] -> {"path":"/users/new","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T12:44:08+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:44:08+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:44:08+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:44:08+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T12:44:13+0200  @main ==============
+ [ trace ] -> server started on 8081
+=====================================================
+============= 2016-05-21T12:44:15+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users/new - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:44:15+0200  @route ==============
+ [ debug ] -> {"path":"/users/new","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T12:44:15+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:44:15+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:44:15+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:44:15+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T12:44:16+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /favicon.ico - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:44:16+0200  @route ==============
+ [ debug ] -> {"path":"/favicon.ico","method":"GET","ext":".ico","params":{}}
+=====================================================
+============= 2016-05-21T12:44:19+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:44:19+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:45:34+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users/new - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:45:34+0200  @route ==============
+ [ debug ] -> {"path":"/users/new","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T12:45:34+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:45:34+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:45:34+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:45:34+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T12:47:27+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users/new - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:47:27+0200  @route ==============
+ [ debug ] -> {"path":"/users/new","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T12:47:27+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:47:27+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:47:27+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:47:27+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T12:47:27+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /favicon.ico - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:47:27+0200  @route ==============
+ [ debug ] -> {"path":"/favicon.ico","method":"GET","ext":".ico","params":{}}
+=====================================================
+============= 2016-05-21T12:47:46+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users/new - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:47:46+0200  @route ==============
+ [ debug ] -> {"path":"/users/new","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T12:47:47+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:47:47+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:47:47+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:47:47+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T12:47:47+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /favicon.ico - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:47:47+0200  @route ==============
+ [ debug ] -> {"path":"/favicon.ico","method":"GET","ext":".ico","params":{}}
+=====================================================
+============= 2016-05-21T12:48:10+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users/new - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:48:10+0200  @route ==============
+ [ debug ] -> {"path":"/users/new","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T12:48:10+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:48:10+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:48:10+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:48:10+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T12:48:11+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /favicon.ico - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:48:11+0200  @route ==============
+ [ debug ] -> {"path":"/favicon.ico","method":"GET","ext":".ico","params":{}}
+=====================================================
+============= 2016-05-21T12:48:37+0200  @handeler ==============
+ [ request ] ->  Method : POST - Ip : 127.0.0.1 - url: /users/new - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:48:37+0200  @route ==============
+ [ debug ] -> {"path":"/users/new","method":"POST","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T12:48:40+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:48:40+0200  @route ==============
+ [ debug ] -> {"path":"/users","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T12:48:40+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:48:40+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:48:40+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:48:40+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T12:49:09+0200  @main ==============
+ [ trace ] -> server started on 8081
+=====================================================
+============= 2016-05-21T12:49:12+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:49:12+0200  @route ==============
+ [ debug ] -> {"path":"/users","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T12:49:13+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:49:13+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:49:13+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:49:13+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T12:49:13+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /favicon.ico - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:49:13+0200  @route ==============
+ [ debug ] -> {"path":"/favicon.ico","method":"GET","ext":".ico","params":{}}
+=====================================================
+============= 2016-05-21T12:49:14+0200  @handeler ==============
+ [ request ] ->  Method : DELETE - Ip : 127.0.0.1 - url: /users - Query: name=delete
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:49:14+0200  @route ==============
+ [ debug ] -> {"path":"/users","method":"DELETE","ext":"","params":{"name":"delete"}}
+=====================================================
+============= 2016-05-21T12:49:14+0200  @main ==============
+ [ error ] -> null
+=====================================================
+============= 2016-05-21T12:49:20+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:49:20+0200  @route ==============
+ [ debug ] -> {"path":"/users","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T12:49:20+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:49:20+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:49:20+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:49:20+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T12:49:20+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /favicon.ico - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:49:20+0200  @route ==============
+ [ debug ] -> {"path":"/favicon.ico","method":"GET","ext":".ico","params":{}}
+=====================================================
+============= 2016-05-21T12:49:56+0200  @main ==============
+ [ trace ] -> server started on 8081
+=====================================================
+============= 2016-05-21T12:49:59+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:49:59+0200  @route ==============
+ [ debug ] -> {"path":"/users","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T12:49:59+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:49:59+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:49:59+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:49:59+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T12:49:59+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /favicon.ico - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:49:59+0200  @route ==============
+ [ debug ] -> {"path":"/favicon.ico","method":"GET","ext":".ico","params":{}}
+=====================================================
+============= 2016-05-21T12:50:00+0200  @handeler ==============
+ [ request ] ->  Method : DELETE - Ip : 127.0.0.1 - url: /users - Query: name=some%20who
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:00+0200  @route ==============
+ [ debug ] -> {"path":"/users","method":"DELETE","ext":"","params":{"name":"some who"}}
+=====================================================
+============= 2016-05-21T12:50:00+0200  @main ==============
+ [ error ] -> null
+=====================================================
+============= 2016-05-21T12:50:03+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:03+0200  @route ==============
+ [ debug ] -> {"path":"/users","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T12:50:03+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:03+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:50:03+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:03+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T12:50:03+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /favicon.ico - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:03+0200  @route ==============
+ [ debug ] -> {"path":"/favicon.ico","method":"GET","ext":".ico","params":{}}
+=====================================================
+============= 2016-05-21T12:50:04+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:04+0200  @route ==============
+ [ debug ] -> {"path":"/users","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T12:50:04+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:04+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:50:04+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:04+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T12:50:04+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /favicon.ico - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:04+0200  @route ==============
+ [ debug ] -> {"path":"/favicon.ico","method":"GET","ext":".ico","params":{}}
+=====================================================
+============= 2016-05-21T12:50:07+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:07+0200  @route ==============
+ [ debug ] -> {"path":"/users","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T12:50:07+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:07+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:50:07+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:07+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T12:50:10+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users/new - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:10+0200  @route ==============
+ [ debug ] -> {"path":"/users/new","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T12:50:10+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:10+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:50:10+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:10+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T12:50:16+0200  @handeler ==============
+ [ request ] ->  Method : POST - Ip : 127.0.0.1 - url: /users/new - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:16+0200  @route ==============
+ [ debug ] -> {"path":"/users/new","method":"POST","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T12:50:20+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:20+0200  @route ==============
+ [ debug ] -> {"path":"/users","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T12:50:20+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:20+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:50:20+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:20+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T12:50:28+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users/edit - Query: name=moustafa
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:28+0200  @route ==============
+ [ debug ] -> {"path":"/users/edit","method":"GET","ext":"","params":{"name":"moustafa"}}
+=====================================================
+============= 2016-05-21T12:50:28+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:28+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T12:50:28+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T12:50:28+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T13:05:18+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:05:18+0200  @route ==============
+ [ debug ] -> {"path":"/users","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T13:05:18+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:05:18+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T13:05:18+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:05:18+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T13:05:18+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /favicon.ico - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:05:18+0200  @route ==============
+ [ debug ] -> {"path":"/favicon.ico","method":"GET","ext":".ico","params":{}}
+=====================================================
+============= 2016-05-21T13:05:21+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users/edit - Query: name=molhm
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:05:21+0200  @route ==============
+ [ debug ] -> {"path":"/users/edit","method":"GET","ext":"","params":{"name":"molhm"}}
+=====================================================
+============= 2016-05-21T13:05:21+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:05:21+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T13:05:21+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:05:21+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T13:05:26+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users/new - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:05:26+0200  @route ==============
+ [ debug ] -> {"path":"/users/new","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T13:05:26+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:05:26+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T13:05:26+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:05:26+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T13:09:50+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:09:50+0200  @route ==============
+ [ debug ] -> {"path":"/users","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T13:09:51+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:09:51+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T13:09:51+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:09:51+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T13:09:51+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /favicon.ico - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:09:51+0200  @route ==============
+ [ debug ] -> {"path":"/favicon.ico","method":"GET","ext":".ico","params":{}}
+=====================================================
+============= 2016-05-21T13:09:53+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users/new - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:09:53+0200  @route ==============
+ [ debug ] -> {"path":"/users/new","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T13:09:53+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:09:53+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T13:09:53+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:09:53+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T13:10:02+0200  @main ==============
+ [ trace ] -> server started on 8081
+=====================================================
+============= 2016-05-21T13:10:07+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users/new - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:10:07+0200  @route ==============
+ [ debug ] -> {"path":"/users/new","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T13:10:08+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:10:08+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T13:10:08+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:10:08+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T13:10:35+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users/new - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:10:35+0200  @route ==============
+ [ debug ] -> {"path":"/users/new","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T13:10:35+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:10:35+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T13:10:35+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:10:35+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T13:10:35+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /favicon.ico - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:10:35+0200  @route ==============
+ [ debug ] -> {"path":"/favicon.ico","method":"GET","ext":".ico","params":{}}
+=====================================================
+============= 2016-05-21T13:11:12+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users/new - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:11:12+0200  @route ==============
+ [ debug ] -> {"path":"/users/new","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T13:11:12+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:11:12+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T13:11:13+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:11:13+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T13:11:13+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /favicon.ico - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:11:13+0200  @route ==============
+ [ debug ] -> {"path":"/favicon.ico","method":"GET","ext":".ico","params":{}}
+=====================================================
+============= 2016-05-21T13:11:28+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users/new - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:11:28+0200  @route ==============
+ [ debug ] -> {"path":"/users/new","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T13:11:28+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:11:28+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T13:11:28+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:11:28+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T13:11:28+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /favicon.ico - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:11:28+0200  @route ==============
+ [ debug ] -> {"path":"/favicon.ico","method":"GET","ext":".ico","params":{}}
+=====================================================
+============= 2016-05-21T13:11:38+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users/new - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:11:38+0200  @route ==============
+ [ debug ] -> {"path":"/users/new","method":"GET","ext":"","params":{}}
+=====================================================
+============= 2016-05-21T13:11:38+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /stylesheets/main.css - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:11:38+0200  @route ==============
+ [ debug ] -> {"path":"/stylesheets/main.css","method":"GET","ext":".css","params":{}}
+=====================================================
+============= 2016-05-21T13:11:38+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /javascript/ajax.js - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:11:38+0200  @route ==============
+ [ debug ] -> {"path":"/javascript/ajax.js","method":"GET","ext":".js","params":{}}
+=====================================================
+============= 2016-05-21T13:11:38+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /favicon.ico - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:11:38+0200  @route ==============
+ [ debug ] -> {"path":"/favicon.ico","method":"GET","ext":".ico","params":{}}
+=====================================================
+============= 2016-05-21T13:11:39+0200  @handeler ==============
+ [ request ] ->  Method : GET - Ip : 127.0.0.1 - url: /users/new - Query: 
+ [ trace ] -> the handeler start working
+=====================================================
+============= 2016-05-21T13:11:39+0200  @route ==============
+ [ debug ] -> {"path":"/users/new","method":"GET","ext":"","params":{}}
+=====================================================

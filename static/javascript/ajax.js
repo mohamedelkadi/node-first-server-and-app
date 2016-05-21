@@ -1,4 +1,4 @@
-var divlist = document.querySelector('div.user-list');
+var divlist = document.querySelector('table.user-list');
 if(divlist)
 divlist.addEventListener('click',function(ev){
 var ele = ev.target;
@@ -6,7 +6,7 @@ if(ele.className === "del")
 { 
     ev.preventDefault();
 
-    var liElement = ele.parentElement;
+    var liElement = ele.parentElement.parentElement;
     var name = liElement.firstElementChild.textContent;
     del(name);
     liElement.remove();
