@@ -6,7 +6,7 @@ params:params
 description:choose the head content based on the ext  
 author:mohammed 
 */
-//make conf in dev 
+
 function writeHeadStatic(res,ext){
   //static files with no errors
   var type = 'text/html';
